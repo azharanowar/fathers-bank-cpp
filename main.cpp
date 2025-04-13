@@ -186,19 +186,19 @@ void checkBalance() {
     cout << "\033[47m\033[1m " << fixed << setprecision(2) << currentBalance << " won " << "\033[0m" << endl;
 
     // Funny reactions
-    if (currentBalance < 1000) {
+    if (currentBalance < 10000) {
         cout << getColoredText("You're broke. Stop checking balance every few minutes, it won't magically go up!\n", "yellow");
     }
-    else if (currentBalance < 5000) {
+    else if (currentBalance < 50000) {
         cout << getColoredText("Ask your father for money. This is embarrassing.\n", "yellow");
     }
-    else if (currentBalance < 20000) {
+    else if (currentBalance < 200000) {
         cout << getColoredText("That's pocket money level. Don't get too excited.\n", "yellow");
     }
-    else if (currentBalance < 100000) {
+    else if (currentBalance < 2000000) {
         cout << getColoredText("Okay okay, now you're middle class rich.\n", "yellow");
     }
-    else if (currentBalance >= 1000000) {
+    else if (currentBalance >= 5000000) {
         cout << getColoredText("You're a rich kid. Respect!\n", "yellow");
     }
 }
@@ -237,18 +237,18 @@ void withdrawMoney() {
     if (amount > currentBalance) {
         cout << getColoredText("Insufficient funds! Stop acting rich, you're not Elon Musk.\n", "red");
         if (currentBalance < 500) {
-            cout << getColoredText("Even your balance is too shy to show up. Time to hustle!\n", "magenta");
+            cout << getColoredText("Even your balance is too shy to show up. Time to hustle!\n", "yellow");
         }
         return;
     }
 
     currentBalance -= amount;
 
-    cout << getColoredText("\nYour withdrawal was successfully!\n", "green");
+    cout << getColoredText("\nYour withdrawal was successfull!\n", "green");
     cout << getColoredText("Amount withdrawn: ", "white", "", "bold") << "\033[47m\033[1m " << amount << " won " << "\033[0m\n\n";
     cout << getColoredText("New balance is: ", "white", "", "bold") << "\033[44m\033[1m " << currentBalance << " won " << "\033[0m\n";
 
-    if (currentBalance < 10000) {
+    if (currentBalance < 100000) {
         cout << getColoredText("Now your wallet is on a diet. And with that amount you will be too\n", "yellow");
     }
 }
