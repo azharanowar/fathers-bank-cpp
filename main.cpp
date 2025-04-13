@@ -187,7 +187,7 @@ void checkBalance() {
 
     // Funny reactions
     if (currentBalance < 1000) {
-        cout << getColoredText("You're broke. Stop checking balance every few minutes later, this won't magically go up!\n", "yellow");
+        cout << getColoredText("You're broke. Stop checking balance every few minutes, it won't magically go up!\n", "yellow");
     }
     else if (currentBalance < 5000) {
         cout << getColoredText("Ask your father for money. This is embarrassing.\n", "yellow");
@@ -199,7 +199,7 @@ void checkBalance() {
         cout << getColoredText("Okay okay, now you're middle class rich.\n", "yellow");
     }
     else if (currentBalance >= 1000000) {
-        cout << getColoredText("You're a rich kid number two. Respect!\n", "yellow");
+        cout << getColoredText("You're a rich kid. Respect!\n", "yellow");
     }
 }
 
@@ -237,19 +237,19 @@ void withdrawMoney() {
     if (amount > currentBalance) {
         cout << getColoredText("Insufficient funds! Stop acting rich, you're not Elon Musk.\n", "red");
         if (currentBalance < 500) {
-            cout << getColoredText("Even your balance is shy to show up. Time to hustle!\n", "magenta");
+            cout << getColoredText("Even your balance is too shy to show up. Time to hustle!\n", "magenta");
         }
         return;
     }
 
     currentBalance -= amount;
 
-    cout << getColoredText("\nWithdrawal amount successfully!\n", "green");
+    cout << getColoredText("\nYour withdrawal was successfully!\n", "green");
     cout << getColoredText("Amount withdrawn: ", "white", "", "bold") << "\033[47m\033[1m " << amount << " won " << "\033[0m\n\n";
     cout << getColoredText("New balance is: ", "white", "", "bold") << "\033[44m\033[1m " << currentBalance << " won " << "\033[0m\n";
 
     if (currentBalance < 10000) {
-        cout << getColoredText("Now your wallet is on a diet. Good luck surviving!\n", "yellow");
+        cout << getColoredText("Now your wallet is on a diet. And with that amount you will be too\n", "yellow");
     }
 }
 
@@ -258,7 +258,7 @@ void logoutUser() {
     sessionUser = "";
     cout << getColoredText("\nLogging out...\n", "green");
     cout << getColoredText("Remember, money doesn't grow on trees unless you're coding for Apple.\n", "yellow");
-    cout << getColoredText("You’ve logged out successfully. Now go touch some grass or earn some cash!\n", "cyan");
+    cout << getColoredText("You've logged out successfully. Now go touch some grass or earn some cash!\n", "cyan");
 }
 
 
