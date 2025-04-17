@@ -179,6 +179,7 @@ void loginUser() {
 
 // Check balance
 void checkBalance() {
+    
     clearConsole();
     printMainHeader("Check Balance");
 
@@ -198,7 +199,7 @@ void checkBalance() {
     else if (currentBalance < 2000000) {
         cout << getColoredText("Okay okay, now you're middle class rich.\n", "yellow");
     }
-    else if (currentBalance >= 5000000) {
+    else if (currentBalance >= 2000000) {
         cout << getColoredText("You're a rich kid. Respect!\n", "yellow");
     }
 }
